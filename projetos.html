@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projetos sociais da Esperança Solidária, como ser voluntário e como fazer uma doação.">
+    <title>Esperança Solidária | Projetos Sociais</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a class="pular-menu" href="#principal">Pular para o conteúdo</a>
+
+    <header class="cabecalho">
+        <div class="conteudo">
+            <a class="logo" href="index.html">Esperança Solidária</a>
+            <nav aria-label="Menu principal">
+                <ul class="menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="projetos.html" class="ativo">Projetos</a></li>
+                    <li><a href="transparencia.html">Transparência</a></li>
+                    <li><a href="dashboard.html">Área Restrita</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="principal">
+        <section class="banner">
+            <div class="conteudo">
+                <div class="texto">
+                    <h1>Projetos sociais</h1>
+                    <p>Conheça o que fazemos, seja voluntário ou ajude com uma doação. Acompanhe as metas de cada campanha.</p>
+                    <a class="botao" href="#voluntariado">Voluntariado</a>
+                    <a class="botao botao-azul" href="#doar">Como doar</a>
+                </div>
+                <div class="imagem">
+                    <picture>
+                        <source srcset="img/nossos-projetos.webp" type="image/webp">
+                        <img src="img/nossos-projetos.jpg" alt="Voluntários desenvolvendo atividades sociais e educativas com crianças e famílias" width="800" height="597">
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projetos -->
+        <section>
+            <div class="conteudo">
+                <h2 class="titulo-secao">Campanhas ativas</h2>
+
+                <article class="projeto" id="educacao">
+                    <div class="imagem">
+                        <picture>
+                            <source srcset="img/projeto-educacao.webp" type="image/webp">
+                            <img src="img/projeto-educacao.jpg" alt="Sala de aula comunitária com crianças e voluntários" width="800" height="424" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="texto">
+                        <span class="etiqueta">Educação e tecnologia</span>
+                        <h3>Lab Digital Comunitário</h3>
+                        <p>Montagem de 3 laboratórios de informática com reforço escolar para 200 crianças e adolescentes.</p>
+                        <p><strong>Impacto:</strong> 200 estudantes, 3 laboratórios e 38 voluntários.</p>
+                        <div class="barra"><div class="barra-75"></div></div>
+                        <p class="pequeno">Arrecadado: R$ 45.000 | Meta: R$ 60.000 (75%)</p>
+                        <a class="botao botao-azul" href="#doar">Apoiar</a>
+                    </div>
+                </article>
+
+                <article class="projeto" id="sopao">
+                    <div class="imagem">
+                        <picture>
+                            <source srcset="img/projeto-sopao.webp" type="image/webp">
+                            <img src="img/projeto-sopao.jpg" alt="Voluntários servindo sopa em grandes panelas" width="800" height="424" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="texto">
+                        <span class="etiqueta">Emergência nutricional</span>
+                        <h3>Sopão Solidário Noturno</h3>
+                        <p>Entrega semanal de refeições balanceadas e kits de higiene para famílias em situação de vulnerabilidade.</p>
+                        <p><strong>Impacto:</strong> 1.200 refeições por semana para 320 famílias.</p>
+                        <div class="barra"><div class="barra-91"></div></div>
+                        <p class="pequeno">Arrecadado: R$ 18.200 | Meta: R$ 20.000 (91%)</p>
+                        <a class="botao botao-azul" href="#doar">Apoiar</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Voluntariado -->
+        <section class="fundo-cinza" id="voluntariado">
+            <div class="conteudo">
+                <h2 class="titulo-secao">Seja voluntário</h2>
+                <p>Você pode ajudar com apenas duas horas por semana. Todo voluntário recebe um certificado digital de participação.</p>
+                <div class="cards">
+                    <article class="card"><h3>Reforço e informática</h3><p>Apoio às aulas do Lab Digital.</p></article>
+                    <article class="card"><h3>Cozinha e entrega</h3><p>Preparo e distribuição das refeições.</p></article>
+                    <article class="card"><h3>Acolhimento</h3><p>Escuta e apoio às famílias.</p></article>
+                    <article class="card"><h3>Apoio administrativo</h3><p>Jurídico, contábil e comunicação.</p></article>
+                </div>
+                <h3>Como participar</h3>
+                <ol>
+                    <li>Preencha o <a href="cadastro.html">formulário de cadastro</a>.</li>
+                    <li>Nossa equipe entra em contato para combinar horários.</li>
+                    <li>Participe da integração e comece a ajudar.</li>
+                </ol>
+                <a class="botao" href="cadastro.html">Quero ser voluntário</a>
+            </div>
+        </section>
+
+        <!-- Como doar -->
+        <section id="doar">
+            <div class="conteudo">
+                <h2 class="titulo-secao">Como doar</h2>
+                <p>Toda doação vai para os projetos e você pode acompanhar o uso do dinheiro no <a href="transparencia.html">portal de transparência</a>.</p>
+                <div class="tabela-rolagem">
+                    <table>
+                        <caption>Formas de doação</caption>
+                        <thead>
+                            <tr><th scope="col">Forma</th><th scope="col">Como fazer</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Pix</td><td>Chave CNPJ: 12.345.678/0001-90</td></tr>
+                            <tr><td>Transferência</td><td>Banco 000, agência 0000, conta 00000-0 (Esperança Solidária)</td></tr>
+                            <tr><td>Alimentos e materiais</td><td>Entregue na nossa sede, de segunda a sábado</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="pequeno">Sugestões: R$ 30 (1 refeição por semana), R$ 60 (1 mês de reforço escolar) e R$ 120 (1 cesta completa).</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="conteudo">
+            <div class="colunas">
+                <div>
+                    <h2>Esperança Solidária</h2>
+                    <p>ONG sem fins lucrativos. CNPJ 12.345.678/0001-90.</p>
+                </div>
+                <div>
+                    <h2>Páginas</h2>
+                    <p><a href="index.html">Início</a> | <a href="projetos.html">Projetos</a> | <a href="transparencia.html">Transparência</a> | <a href="cadastro.html">Cadastro</a></p>
+                </div>
+                <div>
+                    <h2>Contato</h2>
+                    <p><a href="mailto:contato@esperancasolidaria.org.br">contato@esperancasolidaria.org.br</a><br>(11) 3000-0000</p>
+                </div>
+            </div>
+            <p class="copy">&copy; 2026 Esperança Solidária. Projeto acadêmico, dados fictícios.</p>
+        </div>
+    </footer>
+</body>
+</html>

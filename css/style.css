@@ -1,0 +1,572 @@
+/* ===========================================
+   ONG Esperança Solidária - Estilos do site
+   Projeto da disciplina de Desenvolvimento Web
+   =========================================== */
+
+/* Cores que eu uso no site (variáveis CSS) */
+:root {
+    --azul: #5ca4f7;
+    --azul-escuro: #212b86;
+    --azul-claro: #dceef3;
+    --laranja: #ef6c00;
+    --texto: #263238;
+    --cinza: #eceff1;
+    --borda: #cfd8dc;
+    --sombra: 0 12px 30px rgba(33, 43, 134, 0.09);
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    background-color: #f7f9fc;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--azul-escuro);
+}
+
+h1, h2, h3 {
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+
+h1, h2, h3, strong {
+    color: var(--azul-escuro);
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+ul, ol {
+    margin: 0 0 12px 24px;
+}
+
+/* Acessibilidade: foco visível e link para pular o menu */
+a:focus, button:focus, input:focus, select:focus {
+    outline: 3px solid var(--laranja);
+    outline-offset: 2px;
+}
+
+.pular-menu {
+    position: absolute;
+    left: -9999px;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+}
+
+.pular-menu:focus {
+    left: 0;
+    top: 0;
+}
+
+/* ---------- Cabeçalho e menu ---------- */
+.cabecalho {
+    background: linear-gradient(110deg, #212b86, #3154b8);
+    color: #fff;
+    box-shadow: 0 4px 18px rgba(21, 31, 95, 0.18);
+}
+
+.cabecalho .conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    list-style: none;
+    margin: 0;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 999px;
+    display: block;
+    transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.menu a:hover,
+.menu a.ativo {
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+.menu a:hover {
+    transform: translateY(-1px);
+}
+
+/* Largura máxima do conteúdo */
+.conteudo {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+section {
+    padding: 56px 0;
+}
+
+/* ---------- Banner (topo das páginas) ---------- */
+.banner {
+    background: linear-gradient(120deg, #212b86 0%, #3154b8 58%, #5ca4f7 100%);
+    color: #fff;
+    padding: 64px 0;
+}
+
+.banner .conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px;
+}
+
+.banner .texto {
+    flex: 1 1 320px;
+}
+
+.banner .imagem {
+    flex: 1 1 320px;
+}
+
+.banner h1 {
+    font-size: 34px;
+    color: #fff;
+    letter-spacing: -1px;
+}
+
+.banner strong {
+    color: inherit;
+}
+
+.banner img {
+    border-radius: 22px;
+    border: 5px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0 18px 40px rgba(13, 22, 75, 0.28);
+}
+
+/* ---------- Botões ---------- */
+.botao {
+    display: inline-block;
+    background-color: var(--laranja);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 8px;
+    box-shadow: 0 6px 16px rgba(33, 43, 134, 0.16);
+    transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+.botao:hover {
+    background-color: #e65100;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(33, 43, 134, 0.22);
+}
+
+.botao-azul {
+    background-color: var(--azul);
+}
+
+.botao-azul:hover {
+    background-color: var(--azul-escuro);
+}
+
+.banner .botao {
+    color: #fff;
+}
+
+/* No banner o botão azul fica branco, para aparecer no fundo azul */
+.banner .botao-azul {
+    background-color: #fff;
+    color: var(--azul-escuro);
+}
+
+.banner .botao-azul:hover {
+    background-color: var(--azul-claro);
+}
+
+/* ---------- Seções e cards ---------- */
+.fundo-cinza {
+    background: linear-gradient(180deg, #edf3fb, #f7f9fc);
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: clamp(26px, 4vw, 34px);
+    letter-spacing: -0.7px;
+}
+
+.titulo-secao::after {
+    content: "";
+    display: block;
+    width: 54px;
+    height: 4px;
+    margin: 12px auto 0;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--azul), var(--azul-escuro));
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid rgba(207, 216, 220, 0.75);
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(33, 43, 134, 0.06);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra);
+}
+
+.card img {
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.quem-intro {
+    max-width: 760px;
+    margin: 0 auto 28px;
+    text-align: center;
+    font-size: 17px;
+}
+
+.quem-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.quem-card h3 svg {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    color: var(--azul-escuro);
+    background: var(--azul-claro);
+    border-radius: 14px;
+}
+
+.quem-card p {
+    margin-bottom: 0;
+}
+
+.numeros {
+    list-style: none;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(160px, 100%), 1fr));
+    gap: 16px;
+    text-align: center;
+}
+
+.numeros li {
+    background: linear-gradient(145deg, #e8f2ff, #dceef3);
+    border: 1px solid rgba(92, 164, 247, 0.2);
+    border-radius: 18px;
+    padding: 20px 16px;
+}
+
+.numeros strong {
+    display: block;
+    font-size: 30px;
+    color: var(--azul-escuro);
+    line-height: 1.2;
+}
+
+/* Projetos: imagem de um lado e texto do outro */
+.projeto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid var(--borda);
+    border-radius: 20px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 24px rgba(33, 43, 134, 0.06);
+}
+
+.projeto .imagem {
+    flex: 1 1 300px;
+}
+
+.projeto .imagem img {
+    border-radius: 14px;
+}
+
+.projeto .texto {
+    flex: 1 1 300px;
+}
+
+.etiqueta {
+    display: inline-block;
+    background-color: var(--azul-claro);
+    color: var(--azul-escuro);
+    font-size: 13px;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+}
+
+/* Barra de progresso da meta */
+.barra {
+    background-color: var(--cinza);
+    border-radius: 999px;
+    height: 16px;
+    overflow: hidden;
+    margin: 8px 0 4px;
+}
+
+.barra div {
+    background-color: var(--azul);
+    height: 100%;
+}
+
+.barra-75 { width: 75%; }
+.barra-91 { width: 91%; }
+.barra-72 { width: 72%; }
+.barra-15 { width: 15%; }
+.barra-8 { width: 8%; }
+.barra-5 { width: 5%; }
+
+.pequeno {
+    font-size: 14px;
+    color: #546e7a;
+}
+
+#historia ul {
+    display: grid;
+    gap: 12px;
+    margin: 0 0 20px;
+    list-style: none;
+}
+
+#historia li {
+    padding: 14px 18px;
+    background: #fff;
+    border: 1px solid rgba(207, 216, 220, 0.75);
+    border-left: 4px solid var(--azul);
+    border-radius: 12px;
+    box-shadow: 0 5px 16px rgba(33, 43, 134, 0.05);
+}
+
+#contato address {
+    padding: 22px;
+    background: #fff;
+    border: 1px solid rgba(207, 216, 220, 0.75);
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(33, 43, 134, 0.06);
+}
+
+#contato address p:last-child {
+    margin-bottom: 0;
+}
+
+/* ---------- Tabelas ---------- */
+.tabela-rolagem {
+    overflow-x: auto;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(33, 43, 134, 0.06);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+th, td {
+    border: 1px solid var(--borda);
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--azul-claro);
+}
+
+/* ---------- Formulário ---------- */
+.formulario {
+    background-color: #fff;
+    border: 1px solid var(--borda);
+    border-radius: 20px;
+    padding: 28px;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: var(--sombra);
+}
+
+fieldset {
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--azul-escuro);
+    padding: 0 8px;
+}
+
+.campo {
+    margin-bottom: 14px;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #90a4ae;
+    border-radius: 10px;
+    background-color: #fbfdff;
+    transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.campo input:focus,
+.campo select:focus {
+    border-color: var(--azul);
+    box-shadow: 0 0 0 3px rgba(92, 164, 247, 0.18);
+    outline: none;
+}
+
+.campo input:invalid:not(:placeholder-shown) {
+    border-color: #c62828;
+}
+
+.linha {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.linha .campo {
+    flex: 1 1 200px;
+}
+
+.opcao label {
+    font-weight: normal;
+    display: inline;
+}
+
+.opcao input {
+    width: auto;
+}
+
+.mensagem-sucesso {
+    display: none;
+    background-color: var(--azul-claro);
+    border: 1px solid var(--azul);
+    color: var(--azul-escuro);
+    padding: 14px;
+    border-radius: 12px;
+    margin-top: 16px;
+    font-weight: bold;
+}
+
+/* ---------- Rodapé ---------- */
+.rodape {
+    background: linear-gradient(120deg, #1e293b, #263238);
+    color: #cfd8dc;
+    padding: 30px 0 16px;
+}
+
+.rodape .colunas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+    gap: 20px;
+}
+
+.rodape h2 {
+    font-size: 18px;
+    color: #fff;
+}
+
+.rodape a {
+    color: #fff;
+    overflow-wrap: anywhere;
+}
+
+.rodape address {
+    font-style: normal;
+}
+
+.rodape .copy {
+    border-top: 1px solid #455a64;
+    margin-top: 20px;
+    padding-top: 12px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* ---------- Telas maiores que 700px (tablet/desktop) ---------- */
+@media (min-width: 700px) {
+    .banner h1 {
+        font-size: 42px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cadastre-se como voluntário ou doador da ONG Esperança Solidária.">
+    <title>Esperança Solidária | Cadastro</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a class="pular-menu" href="#principal">Pular para o conteúdo</a>
+
+    <header class="cabecalho">
+        <div class="conteudo">
+            <a class="logo" href="index.html">Esperança Solidária</a>
+            <nav aria-label="Menu principal">
+                <ul class="menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="transparencia.html">Transparência</a></li>
+                    <li><a href="dashboard.html">Área Restrita</a></li>
+                    <li><a href="cadastro.html" class="ativo">Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="principal">
+        <section class="banner">
+            <div class="conteudo">
+                <div class="texto">
+                    <h1>Junte-se à nossa causa</h1>
+                    <p>Preencha o formulário para se cadastrar como voluntário ou doador. Nossa equipe entra em contato em até 5 dias úteis.</p>
+                </div>
+                <div class="imagem">
+                    <picture>
+                        <source srcset="img/sobre-nos.webp" type="image/webp">
+                        <img src="img/sobre-nos.jpg" alt="Grupo de voluntários sorrindo com a faixa da ONG" width="800" height="424">
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="conteudo">
+                <form class="formulario" id="formCadastro" action="#" method="post">
+                    <h2>Formulário de cadastro</h2>
+                    <p class="pequeno">Todos os campos são obrigatórios.</p>
+
+                    <!-- Grupo 1: dados pessoais -->
+                    <fieldset>
+                        <legend>Dados pessoais</legend>
+
+                        <div class="campo">
+                            <label for="nome">Nome completo</label>
+                            <input type="text" id="nome" name="nome" required minlength="5" maxlength="100" placeholder="Digite seu nome completo" autocomplete="name">
+                        </div>
+
+                        <div class="linha">
+                            <div class="campo">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" required placeholder="voce@exemplo.com" autocomplete="email">
+                            </div>
+                            <div class="campo">
+                                <label for="telefone">Telefone</label>
+                                <input type="tel" id="telefone" name="telefone" required maxlength="15" pattern="\(\d{2}\) \d{4,5}-\d{4}" placeholder="(11) 99999-9999" title="Formato: (11) 99999-9999" autocomplete="tel">
+                            </div>
+                        </div>
+
+                        <div class="linha">
+                            <div class="campo">
+                                <label for="cpf">CPF</label>
+                                <input type="text" id="cpf" name="cpf" required maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" title="Formato: 000.000.000-00" inputmode="numeric">
+                            </div>
+                            <div class="campo">
+                                <label for="nascimento">Data de nascimento</label>
+                                <input type="date" id="nascimento" name="nascimento" required min="1900-01-01" max="2026-12-31" autocomplete="bday">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Grupo 2: endereço -->
+                    <fieldset>
+                        <legend>Endereço</legend>
+
+                        <div class="linha">
+                            <div class="campo">
+                                <label for="cep">CEP</label>
+                                <input type="text" id="cep" name="cep" required maxlength="9" pattern="\d{5}-\d{3}" placeholder="00000-000" title="Formato: 00000-000" inputmode="numeric" autocomplete="postal-code">
+                            </div>
+                            <div class="campo">
+                                <label for="endereco">Endereço (rua, número e bairro)</label>
+                                <input type="text" id="endereco" name="endereco" required placeholder="Rua, número e bairro" autocomplete="address-line1">
+                            </div>
+                        </div>
+
+                        <div class="linha">
+                            <div class="campo">
+                                <label for="cidade">Cidade</label>
+                                <input type="text" id="cidade" name="cidade" required placeholder="Sua cidade" autocomplete="address-level2">
+                            </div>
+                            <div class="campo">
+                                <label for="estado">Estado</label>
+                                <select id="estado" name="estado" required autocomplete="address-level1">
+                                    <option value="">Selecione</option>
+                                    <option value="AC">Acre</option>
+                                    <option value="AL">Alagoas</option>
+                                    <option value="AP">Amapá</option>
+                                    <option value="AM">Amazonas</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="CE">Ceará</option>
+                                    <option value="DF">Distrito Federal</option>
+                                    <option value="ES">Espírito Santo</option>
+                                    <option value="GO">Goiás</option>
+                                    <option value="MA">Maranhão</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="PB">Paraíba</option>
+                                    <option value="PR">Paraná</option>
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="PI">Piauí</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="RO">Rondônia</option>
+                                    <option value="RR">Roraima</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="SE">Sergipe</option>
+                                    <option value="TO">Tocantins</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Grupo 3: como quer ajudar -->
+                    <fieldset>
+                        <legend>Como você quer ajudar?</legend>
+                        <div class="campo opcao">
+                            <input type="radio" id="voluntario" name="perfil" value="voluntario" required checked>
+                            <label for="voluntario">Voluntário</label>
+                        </div>
+                        <div class="campo opcao">
+                            <input type="radio" id="doador" name="perfil" value="doador">
+                            <label for="doador">Doador</label>
+                        </div>
+                        <div class="campo opcao">
+                            <input type="radio" id="ambos" name="perfil" value="ambos">
+                            <label for="ambos">Os dois</label>
+                        </div>
+                    </fieldset>
+
+                    <div class="campo opcao">
+                        <input type="checkbox" id="aceite" name="aceite" required>
+                        <label for="aceite">Concordo com o uso dos meus dados para contato da ONG (LGPD).</label>
+                    </div>
+
+                    <button type="submit" class="botao">Finalizar cadastro</button>
+                </form>
+
+                <p class="mensagem-sucesso" id="mensagemSucesso" role="status">Cadastro enviado com sucesso! Em breve entraremos em contato.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="conteudo">
+            <div class="colunas">
+                <div>
+                    <h2>Esperança Solidária</h2>
+                    <p>ONG sem fins lucrativos. CNPJ 12.345.678/0001-90.</p>
+                </div>
+                <div>
+                    <h2>Páginas</h2>
+                    <p><a href="index.html">Início</a> | <a href="projetos.html">Projetos</a> | <a href="transparencia.html">Transparência</a> | <a href="cadastro.html">Cadastro</a></p>
+                </div>
+                <div>
+                    <h2>Contato</h2>
+                    <p><a href="mailto:contato@esperancasolidaria.org.br">contato@esperancasolidaria.org.br</a><br>(11) 3000-0000</p>
+                </div>
+            </div>
+            <p class="copy">&copy; 2026 Esperança Solidária. Projeto acadêmico, dados fictícios.</p>
+        </div>
+    </footer>
+
+    <script src="js/cadastro.js"></script>
+</body>
+</html>
